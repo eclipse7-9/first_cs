@@ -1,0 +1,34 @@
+﻿@page
+@model WebApplication1.Pages.CrearProductoModel
+
+<h2>Crear Producto</h2>
+
+<form method="post">
+    <div>
+        <label>Nombre</label>
+        <input asp-for="Producto.Nombre" />
+    </div>
+
+    <div>
+        <label>Descripción</label>
+        <input asp-for="Producto.Descripcion" />
+    </div>
+
+    <div>
+        <label>Precio</label>
+        <input asp-for="Producto.Precio" />
+    </div>
+
+    <div>
+        <label>Stock</label>
+        <input asp-for="Producto.Stock" />
+    </div>
+
+    <button type="submit">Guardar</button>
+
+</form>
+
+@if (Model.Mensaje != null)
+{
+    <p>@Model.Mensaje</p>
+}
